@@ -1,6 +1,3 @@
-### 4. `ejemplo-taller-mecanico.md`
-
-```markdown
 # Ejemplo 2: Simulación de un Taller Mecánico
 
 Este ejemplo simula un taller mecánico donde los coches llegan para ser reparados. El taller cuenta con un número limitado de mecánicos y un inventario limitado de piezas para las reparaciones.
