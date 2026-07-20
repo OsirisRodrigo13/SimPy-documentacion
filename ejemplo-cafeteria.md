@@ -1,6 +1,3 @@
-### 5. `ejemplo-cafeteria.md`
-
-```markdown
 # Ejemplo 3: Simulación de una Cafetería
 
 Este ejemplo simula una cafetería donde los clientes llegan, piden un café y lo recogen cuando está listo. La cafetería tiene una capacidad limitada de clientes dentro del local.
