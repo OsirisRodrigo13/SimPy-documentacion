@@ -1,5 +1,3 @@
-### 2. `que-es-simpy.md`
-
 # ¿Qué es SimPy?
 
 **SimPy** (Simulation in Python) es un potente framework de código abierto para la **simulación de eventos discretos (DES, por sus siglas en inglés)**. Está basado en Python estándar y utiliza generadores para definir los procesos, lo que lo hace muy intuitivo y fácil de usar para modelar sistemas complejos [citation:5][citation:7].
