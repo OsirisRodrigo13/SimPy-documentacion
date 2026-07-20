@@ -1,6 +1,3 @@
-### 3. `ejemplo-banco.md`
-
-```markdown
 # Ejemplo 1: Simulación de un Banco
 
 Este ejemplo simula un banco con un número limitado de cajeros. Los clientes llegan de forma aleatoria, esperan en una fila y son atendidos por el primer cajero disponible.
