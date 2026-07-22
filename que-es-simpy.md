@@ -41,17 +41,3 @@ La forma más sencilla de instalar SimPy es a través de pip:
 
 ```bash
 pip install simpy
-
-## Ejemplo Basico
-
-python
-import simpy
-
-def reloj(env):
-    while True:
-        print(f'Hora: {env.now}')
-        yield env.timeout(1)
-
-env = simpy.Environment()
-env.process(reloj(env))
-env.run(until=5)
