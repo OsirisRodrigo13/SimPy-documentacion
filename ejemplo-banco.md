@@ -15,14 +15,14 @@ El objetivo es observar cómo se comporta el sistema de colas y analizar los tie
 
 ## Conceptos Aaplicados
 
--Simulación de Eventos Discretos (DES)
--Biblioteca SimPy
--Recursos compartidos (simpy.Resource)
--Distribución Exponencial
--Procesos concurrentes
--Colas de espera
--Llegadas aleatorias
--Tiempo de servicio aleatorio
+- Simulación de Eventos Discretos (DES)
+- Biblioteca SimPy
+- Recursos compartidos (simpy.Resource)
+- Distribución Exponencial
+- Procesos concurrentes
+- Colas de espera
+- Llegadas aleatorias
+- Tiempo de servicio aleatorio
 
 ## Parámetros del Sistema
 
@@ -37,17 +37,17 @@ El objetivo es observar cómo se comporta el sistema de colas y analizar los tie
 
 La simulación sigue los siguientes pasos:
 
-1.Se crea el ambiente de simulación.
-2.Se crean los cajeros como un recurso compartido.
-3.Se generan clientes continuamente.
-4.Cada cliente llega al banco.
-5.Si existe un cajero libre:
--Es atendido inmediatamente.
-6.Si todos los cajeros están ocupados:
--El cliente entra automáticamente a la fila.
-7.Cuando un cajero termina de atender:
--Atiende al siguiente cliente de la cola.
-8.La simulación termina cuando se alcanza el tiempo establecido.
+1. Se crea el ambiente de simulación.
+2. Se crean los cajeros como un recurso compartido.
+3. Se generan clientes continuamente.
+4. Cada cliente llega al banco.
+5. Si existe un cajero libre:
+- Es atendido inmediatamente.
+6. Si todos los cajeros están ocupados:
+- El cliente entra automáticamente a la fila.
+7. Cuando un cajero termina de atender:
+- Atiende al siguiente cliente de la cola.
+8. La simulación termina cuando se alcanza el tiempo establecido.
 
 ## Código de la Simulación
 
