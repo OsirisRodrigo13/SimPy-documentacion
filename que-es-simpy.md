@@ -2,6 +2,13 @@
 
 **SimPy** (Simulation in Python) es un potente framework de código abierto para la **simulación de eventos discretos (DES, por sus siglas en inglés)**. Está basado en Python estándar y utiliza generadores para definir los procesos, lo que lo hace muy intuitivo y fácil de usar para modelar sistemas complejos [citation:5][citation:7].
 
+## ¿Por qué usar SimPy?
+
+- **Simple y Pythonico**: Usa sintaxis de Python estándar, no necesitas aprender un nuevo lenguaje.
+- **Flexible**: Puedes modelar casi cualquier sistema de eventos discretos.
+- **Eficiente**: Maneja miles de eventos simultáneos sin problemas.
+- **Gratuito y Open Source**: Código abierto con licencia MIT.
+
 ## Conceptos Fundamentales
 
 SimPy se basa en tres conceptos principales [citation:1][citation:7]:
@@ -34,3 +41,15 @@ La forma más sencilla de instalar SimPy es a través de pip:
 
 ```bash
 pip install simpy
+
+## Ejemplo Basico
+import simpy
+
+def reloj(env):
+    while True:
+        print(f'Hora: {env.now}')
+        yield env.timeout(1)
+
+env = simpy.Environment()
+env.process(reloj(env))
+env.run(until=5)
