@@ -1,17 +1,30 @@
 # Ejemplo 2: Simulación de un Taller Mecánico
 
-Este ejemplo simula un taller mecánico con **2 mecánicos** y un **inventario limitado de piezas**. Los coches llegan, son reparados y el inventario se repone periódicamente.
+Este proyecto implementa una simulación de eventos discretos utilizando la biblioteca SimPy para representar el funcionamiento de un taller mecánico.
 
-## Objetivo
+El taller dispone de un número limitado de mecánicos y de un inventario de piezas de repuesto. Los vehículos llegan de manera aleatoria para ser reparados. Cada reparación requiere un mecánico disponible y una determinada cantidad de piezas del inventario. Cuando el inventario disminuye, un proceso independiente realiza reposiciones periódicas.
 
-Analizar cómo la disponibilidad de piezas y mecánicos afecta los tiempos de reparación.
+La simulación permite observar cómo la disponibilidad de recursos influye en el tiempo de espera de los vehículos y en la eficiencia del taller.
 
-## Conceptos Demostrados
+## Objetivos
 
-- ✅ Uso de `simpy.Container` para modelar inventario
-- ✅ Interacción entre recursos (mecánicos + piezas)
-- ✅ Procesos de reposición automática
-- ✅ Espera por múltiples recursos
+- Simular el funcionamiento de un taller mecánico.
+- Analizar el uso de los mecánicos.
+- Observar el comportamiento del inventario de piezas.
+- Comprender la interacción entre recursos limitados.
+- Evaluar los tiempos de espera de los vehículos.
+
+## Conceptos Aplicados
+
+- Simulación de Eventos Discretos (DES)
+- Biblioteca SimPy
+- Recursos (simpy.Resource)
+- Contenedores (simpy.Container)
+- Distribuciones Exponenciales
+- Procesos concurrentes
+- Administración de inventarios
+- Colas de espera
+- Reposición automática de recursos
 
 ## Parámetros del Sistema
 
@@ -23,6 +36,23 @@ Analizar cómo la disponibilidad de piezas y mecánicos afecta los tiempos de re
 | `cantidad_reposicion` | 2 | Cuántas piezas se añaden en cada reposición |
 | `intervalo_llegada` | 3.0 | Tiempo medio entre llegadas de coches |
 | `TIEMPO_SIMULACION` | 30 | Duración de la simulación |
+
+## Funcionamiento del Programa
+
+La simulación sigue el siguiente proceso:
+
+1. Se crea el ambiente de simulación.
+2. Se inicializa el taller con dos mecánicos.
+3. Se crea un inventario inicial de piezas.
+4. Los vehículos llegan de forma aleatoria.
+5. Cada vehículo solicita un mecánico disponible.
+6. Posteriormente solicita las piezas necesarias para la reparación.
+7. Si existen suficientes piezas:
+. La reparación inicia inmediatamente.
+8. Si no existen suficientes piezas:
+. El vehículo espera hasta que el inventario sea repuesto.
+9. Un proceso independiente agrega piezas al inventario periódicamente.
+10. Una vez finalizada la reparación, el vehículo abandona el taller.
 
 ## Código de la Simulación
 
