@@ -13,7 +13,7 @@ El objetivo es observar cómo se comporta el sistema de colas y analizar los tie
 - Observar el uso de los cajeros.
 - Comprender el funcionamiento de un sistema de atención con recursos limitados.
 
-## Conceptos Aaplicados
+## Conceptos Aplicados
 
 - Simulación de Eventos Discretos (DES)
 - Biblioteca SimPy
