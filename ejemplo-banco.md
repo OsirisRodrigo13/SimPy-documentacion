@@ -49,6 +49,10 @@ La simulación sigue los siguientes pasos:
 - Atiende al siguiente cliente de la cola.
 8. La simulación termina cuando se alcanza el tiempo establecido.
 
+## Resultados Esperados
+
+La salida del código mostrará los eventos de llegada, inicio y fin de servicio para cada cliente, junto con los tiempos de espera. Se puede observar cómo los clientes esperan en la cola cuando todos los cajeros están ocupados.
+
 ## Código de la Simulación
 
 ```python
