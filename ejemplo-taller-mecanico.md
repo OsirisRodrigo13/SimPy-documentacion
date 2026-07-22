@@ -54,6 +54,10 @@ La simulación sigue el siguiente proceso:
 9. Un proceso independiente agrega piezas al inventario periódicamente.
 10. Una vez finalizada la reparación, el vehículo abandona el taller.
 
+## Resultados Esperados
+
+El simulador mostrará cómo los coches esperan tanto por mecánicos como por piezas, lo que demuestra la interacción entre dos recursos limitados y cómo la reposición de inventario afecta los tiempos de espera.
+
 ## Código de la Simulación
 
 ```python
