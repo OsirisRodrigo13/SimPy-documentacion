@@ -1,17 +1,46 @@
 # Ejemplo 3: Simulación de una Cafetería
 
-Este ejemplo simula una cafetería con capacidad para **3 clientes dentro del local**. Los clientes llegan, piden café y esperan mientras el barista prepara los pedidos en orden FIFO.
+Este proyecto implementa una simulación de eventos discretos utilizando la biblioteca SimPy para representar el funcionamiento de una cafetería.
 
-## Objetivo
+La cafetería cuenta con una capacidad limitada de clientes dentro del local y un único barista encargado de preparar los pedidos. Los clientes llegan de forma aleatoria, ingresan si existe espacio disponible, realizan su pedido y esperan hasta que su café esté listo. Los pedidos son preparados siguiendo una política FIFO (First In, First Out), es decir, el primer pedido en llegar es el primero en ser atendido.
 
-Demostrar cómo sincronizar procesos usando eventos personalizados y colas FIFO.
+La simulación permite observar el comportamiento de las colas, la sincronización entre procesos y el impacto de la capacidad del establecimiento.
 
-## Conceptos Demostrados
+## Objetivos
 
-- ✅ Uso de `simpy.Store` para colas de pedidos
-- ✅ Eventos personalizados con `env.event()`
-- ✅ Capacidad limitada del local con `Resource`
-- ✅ Sincronización entre procesos (cliente y barista)
+- Simular el funcionamiento de una cafetería utilizando SimPy.
+- Analizar el tiempo de espera de los clientes.
+- Observar el comportamiento de una cola FIFO.
+- Comprender la sincronización mediante eventos personalizados.
+- Evaluar la utilización del barista y la capacidad del local.
+
+## Conceptos Aplicados
+
+- Simulación de Eventos Discretos (DES)
+- Biblioteca SimPy
+- Recursos (simpy.Resource)
+- Colas FIFO (simpy.Store)
+- Eventos personalizados (env.event())
+- Procesos concurrentes
+- Distribución Exponencial
+- Sincronización entre procesos
+
+## Funcionamiento del Programa
+
+La simulación sigue los siguientes pasos:
+
+1. Se crea el ambiente de simulación.
+2. Se inicializa la cafetería con una capacidad máxima de tres clientes.
+3. Se inicia el proceso del barista.
+4. Los clientes llegan de forma aleatoria.
+5. Si existe espacio disponible:
+- El cliente entra al local.
+6. El cliente realiza su pedido.
+7. El pedido se almacena en una cola FIFO.
+8. El barista prepara los pedidos respetando el orden de llegada.
+9. Cuando el café está listo:
+- Se notifica al cliente mediante un evento.
+10. El cliente recoge su pedido y abandona la cafetería.
 
 ## Parámetros del Sistema
 
