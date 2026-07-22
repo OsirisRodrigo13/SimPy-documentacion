@@ -51,6 +51,10 @@ La simulación sigue los siguientes pasos:
 | `TIEMPO_SIMULACION` | 20 | Duración de la simulación |
 | `tiempo_preparacion` | 1.0-3.0 | Rango de tiempo para preparar café |
 
+## Resultados Esperados
+
+Este ejemplo muestra cómo Store se utiliza como un buffer de trabajo para el barista y cómo los eventos personalizados (env.event()) permiten que un proceso (el cliente) espere a que otro proceso (el barista) complete una tarea específica.
+
 ## Código de la Simulación
 
 ```python
