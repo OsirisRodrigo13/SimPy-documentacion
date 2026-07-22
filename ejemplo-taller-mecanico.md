@@ -48,9 +48,9 @@ La simulación sigue el siguiente proceso:
 5. Cada vehículo solicita un mecánico disponible.
 6. Posteriormente solicita las piezas necesarias para la reparación.
 7. Si existen suficientes piezas:
-. La reparación inicia inmediatamente.
+- La reparación inicia inmediatamente.
 8. Si no existen suficientes piezas:
-. El vehículo espera hasta que el inventario sea repuesto.
+- El vehículo espera hasta que el inventario sea repuesto.
 9. Un proceso independiente agrega piezas al inventario periódicamente.
 10. Una vez finalizada la reparación, el vehículo abandona el taller.
 
