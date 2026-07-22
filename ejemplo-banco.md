@@ -1,17 +1,28 @@
 # Ejemplo 1: Simulación de un Banco
 
-Este ejemplo simula un banco con **2 cajeros**. Los clientes llegan de forma aleatoria, esperan en una fila y son atendidos por el primer cajero disponible.
+Este proyecto implementa una simulación de eventos discretos utilizando la biblioteca SimPy para representar el funcionamiento de un banco con un número limitado de cajeros.
+
+Los clientes llegan de forma aleatoria al banco, esperan en una fila cuando todos los cajeros están ocupados y son atendidos conforme un cajero queda disponible.
+
+El objetivo es observar cómo se comporta el sistema de colas y analizar los tiempos de espera de los clientes.
 
 ## Objetivo
 
-Analizar los tiempos de espera de los clientes en función del número de cajeros disponibles.
+- Simular un sistema de colas utilizando SimPy.
+- Analizar el tiempo de espera de los clientes.
+- Observar el uso de los cajeros.
+- Comprender el funcionamiento de un sistema de atención con recursos limitados.
 
-## Conceptos Demostrados
+## Conceptos Aaplicados
 
-- ✅ Uso de `simpy.Resource` para modelar los cajeros
-- ✅ Generación de procesos de clientes a intervalos regulares
-- ✅ Distribuciones de probabilidad (exponencial) para llegadas y servicio
-- ✅ Colas de espera automáticas
+-Simulación de Eventos Discretos (DES)
+-Biblioteca SimPy
+-Recursos compartidos (simpy.Resource)
+-Distribución Exponencial
+-Procesos concurrentes
+-Colas de espera
+-Llegadas aleatorias
+-Tiempo de servicio aleatorio
 
 ## Parámetros del Sistema
 
@@ -21,6 +32,22 @@ Analizar los tiempos de espera de los clientes en función del número de cajero
 | `TIEMPO_LLEGADA` | 2.0 | Tiempo medio entre llegadas (media exponencial) |
 | `TIEMPO_SERVICIO` | 3.0 | Tiempo medio de atención (media exponencial) |
 | `TIEMPO_SIMULACION` | 20 | Tiempo total de simulación |
+
+## Funcionamiento del Programa
+
+La simulación sigue los siguientes pasos:
+
+1.Se crea el ambiente de simulación.
+2.Se crean los cajeros como un recurso compartido.
+3.Se generan clientes continuamente.
+4.Cada cliente llega al banco.
+5.Si existe un cajero libre:
+-Es atendido inmediatamente.
+6.Si todos los cajeros están ocupados:
+-El cliente entra automáticamente a la fila.
+7.Cuando un cajero termina de atender:
+-Atiende al siguiente cliente de la cola.
+8.La simulación termina cuando se alcanza el tiempo establecido.
 
 ## Código de la Simulación
 
