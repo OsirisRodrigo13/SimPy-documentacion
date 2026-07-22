@@ -43,6 +43,7 @@ La forma más sencilla de instalar SimPy es a través de pip:
 pip install simpy
 
 ## Ejemplo Basico
+python
 import simpy
 
 def reloj(env):
